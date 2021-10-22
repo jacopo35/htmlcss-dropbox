@@ -9,3 +9,138 @@ html {
   font-family:'Open Sans', sans-serif;
 }
 
+body {
+  width: 100%;
+}
+
+.header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 4em;
+}
+
+.clearfix::after {    
+    content: "";
+    display: table;
+    clear: both;
+}
+main{
+  width: 100%;
+}
+
+.col-logo, .menu-sx {float: left; }
+.menu-dx, .login {float: right; }
+
+.col-logo {
+    line-height: 3.8em;
+    text-align: center;
+}
+#logo {
+    width: 60%;
+    vertical-align: middle;
+}
+
+li.border-bottom, li.hover-menu {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 3.8em;
+    margin-right: 1em;  
+}
+.border-bottom a, .hover-menu a {
+    text-decoration: none;
+    color: black ;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+li.border-bottom:hover{ border-bottom: 2px solid grey; }
+.login{
+    line-height: 4em;
+    padding: 0 1em;
+}
+
+.button {
+    background-color: #0061ff;
+    color: white;
+    border: none;
+    padding: 0.5em 1.5em;
+}
+.button:hover { 
+  opacity:0.7 
+}
+
+.jumbotron {
+    background-color: #b4d0e7 ;
+}
+.description {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+.jumbo-col-sx {
+    width: 35%;
+    float: left;
+}
+
+.jumbo-col-dx {
+    width: 65%;
+  float: left;
+}
+#jumbo {
+    max-width: 70%;
+    position: absolute;
+}
+.jumbo-col-sx > button {
+     margin: 2em 0 1em 0;
+    font-size: 0.9em;
+}
+.fa {
+    font-size: 2em;
+    color: black;
+    margin: 1em 0 2em; 
+}
+
+
+.first-section {
+        width: 70%;
+        margin: 10em auto ;
+    }
+.checkbox {
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 50px ;
+    line-height: 5em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
+.checkbox:active {
+    border: inset 5px #0061ff;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 3.7em;
+    width: 80%;
+    padding: 2em 0 0.5em;
+    margin: 0 auto;
+}
+  
+.jumbo-col-sx > p {
+    font-weight: 600;
+    font-size: 0.85em;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 3em;
+}
+.checkbox-text {
+    vertical-align: middle;
+    line-height: 5em;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-right: 1em;
+}
