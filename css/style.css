@@ -422,10 +422,6 @@ span.purchase a:focus {
     padding: 2em 0;
 }
 
-.partner-col-right .btn-light {
-
-}
-
 .features-container .col-features {
     width: calc(100% / 3 - 40px);
 }
