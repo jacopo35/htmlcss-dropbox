@@ -1,67 +1,559 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-   <title>Fake Dropbox</title>
+    <title> fake-Dropbox</title>
 </head>
-<body>
-    <body>
-        <!-- inizio Header -->
-    <header>
-    <div class=" header clearfix">
-    <div class="col-logo">
-        <img src="img/logo-small.png" alt="Logo di Dropbox">
-    </div>
-    <br>
-    <div class="menu-sx">
-        <nav>
-            <ul>
-                <li class="border-bottom"><a href="#">Perchè Dropbox?</a></li>
-                <li class="border-bottom"><a href="#">Funzioni</a></li>
-                <li class="border-bottom"><a href="#">Piani e prezzi</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="login">
-        <button class="button">Inizia</button>
-    </div>
-    <div class="menu-dx">
-        <nav>
-            <ul>
-                <li class="hover-menu"><a href="#">Supporto</a></li>
-                <li class="hover-menu"><a href="#">Contatta l'ufficio vendite</a></li>
-                <li class="hover-menu"><a href="#">Accedi</a></li>
-            </ul>
-        </nav>
-    </div>
-    </div>
-        <section class="jumbotron ">
-            <h1>Tutto ciò che ti serve per il lavoro, in un unico posto </h1>
-    <div class="description clearfix">
-    <div class="jumbo-col-sx ">
-            <p>Finalmente tutti i tuoi strumenti, contenuti e collaboratori sono accessibili dallo stesso posto.
-            Dropbox Business è più di uno spazio di archiviazione sicuro: è un modo intelligente e integrato
-            per ottimizzare il flusso di lavoro esistente.</p>
-            <button class="button"> Inizia la tua prova gratuita</button>
-            <p>Annulla in qualsiasi momento</p>
-            <span><a href=""><i class="fa fa-arrow-down"></i></a></span>
-    </div>
-    <div class="jumbo-col-dx">
-        <img id="jumbo" src="img/jumbo.png" alt="imamgine del jumbotron">
-    </div>
-    </div>
-</section>
- </header>
- <!--fine header-->
 
- <main></main>
- <footer></footer>
+<body>
+    <!-- header -->
+    <header class="relative">
+
+        <!-- nav -->
+        <nav class="clearfix">
+            <div class="col-logo float-left">
+                <a href=""><img src="img/logo-small.png" alt="logo di dropbox"></a>
+            </div>
+            <div class="col-menu-first float-left">
+                <ul class="nav-menu">
+                    <li><a href="#">Perch&eacute; Dropbox&quest;</a></li>
+                    <li><a href="#">Funzioni</a></li>
+                    <li><a href="#">Piani e prezzi</a></li>
+                </ul>
+            </div>
+            <div class="col-btn float-right">
+                <a class="btn-blue" href="#">Inizia</a>
+            </div>
+            <div class="col-menu-second float-right">
+                <ul class="nav-menu">
+                    <li><a href="#">Supporto</a></li>
+                    <li><a href="#">Contatta l'ufficio vendite</a></li>
+                    <li><a href="#">Accedi</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /nav -->
+
+        <!-- jumbo -->
+        <section class="jumbotron">
+            <div class="jumbo-container clearfix width-80 padding-tb-8">
+                <h1 class="jumbo-title">Tutto ci&ograve; che ti serve per il lavoro, in un unico posto</h1>
+                <div class="col-jumbo-left float-left">
+                    <p class="desc">Finalmente tutti i tuoi strumenti, contenuti e collaboratori sono accessibili dallo
+                        stesso posto.
+                        Dropbox Business &egrave; pi&ugrave; di uno spazio di archiviazione sicuro: &egrave; un modo
+                        intelligente e
+                        integrato per ottimizzare il flusso di lavoro esistente.</p>
+                    <div class="jumbo-trial">
+                        <a href="#" class="btn-blue">Inizia la tua prova gratuita</a>
+                    </div>
+                    <p class="desc-little">Annulla in qualsiasi momento</p>
+                    <div class="arrow-down">
+                        <a href="#plans">
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-jumbo-right float-left relative">
+                    <div class="jumbo-img absolute">
+                        <img src="img/jumbo.png" alt="schermata dropbox business">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--jumbo -->
+
+    </header>
+    <!-- /header -->
+
+    <!-- inizio main -->
+    <main>
+        <section class="plans padding-tb-4em width-70" id="plans">
+            <header>
+                <h2>Trova il piano Dropbox Business che fa per te</h2>
+                <div class="billing margin-top-4em">
+                    <span class="circle bordered"></span><span class="billing-type">Fatturazione mensile</span>
+                    <span class="circle empty"></span><span class="billing-type">Fatturazione annuale</span>
+                </div>
+            </header>
+
+            <div class="container-col-plans clearfix">
+                <div class="col-plan first-row float-left">
+                    <div class="for-who">
+                        <i class="far fa-user"></i> Singolo
+                    </div>
+                    <div class="container-offer">
+                        <div class="offer">
+                            <h3>Professional</h3>
+                            <h4>19,99 &euro;</h4>
+                            <p class="grey">&sol; mese</p>
+                        </div>
+                        <div class="desc-offer">
+                         <ul>
+                           <li class="clearfix">
+                                <div class="li-icon float-left">
+                                <i class="far fa-user"></i>
+                                </div>
+                                <div class="li-desc float-left">
+                                    1 utente
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="li-icon float-left">
+                                        <i class="far fa-folder"></i>
+                                    </div>
+                                    <div class="li-desc float-left">
+                                        3 TB di spazio di archiviazione sicuro
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="li-icon float-left">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </div>
+                                    <div class="li-desc float-left">
+                                        Funzioni di produttivit&agrave; premium e considisione file semplice e sicura
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="offer-trial">
+                                <a href="#" class="btn-blue">Prova gratis per 30 giorni</a>
+                            </div>
+                            <span class="purchase underline">oppure </span> <span class="purchase"><a href="#">acquista
+                                    ora</a></span>
+                            <div class="hightlights">
+                                <h4>Punti salienti del piano</h4>
+                                <ul>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Invia file fino a 100 GB con Dropbox Transfert
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Cartelle offline su dispositivi mobili
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Pulizia remota dell'account
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Filigrana documento
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Assistenza prioritaria via email e chat
+                                        </div>
+                                    </li>
+                                    <li class="clearfix hidden">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Assistenza prioritaria via email e chat
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-plan first-row float-left">
+                    <div class="for-who">
+                        <i class="far fa-building"></i> Team
+                    </div>
+                    <div class="container-offer">
+                        <div class="offer">
+                            <h3>Standard</h3>
+                            <h4>19,99 &euro;</h4>
+                            <p class="grey">&sol; utente &sol; mese, a partire da 3 utenti</p>
+                        </div>
+                        <div class="desc-offer">
+                            <ul>
+                                <li class="clearfix">
+                                    <div class="li-icon float-left">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div class="li-desc float-left">
+                                        1 utente
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="li-icon float-left">
+                                        <i class="far fa-folder"></i>
+                                    </div>
+                                    <div class="li-desc float-left">
+                                        3 TB di spazio di archiviazione sicuro
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="li-icon float-left">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </div>
+                                    <div class="li-desc float-left">
+                                        Funzioni di produttivit&agrave; premium e considisione file semplice e sicura
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="offer-trial">
+                                <a href="#" class="btn-blue">Prova gratis per 30 giorni</a>
+                            </div>
+                            <span class="purchase underline">oppure </span> <span class="purchase"><a href="#">acquista
+                                    ora</a></span>
+                            <div class="hightlights">
+                                <h4>Punti salienti del piano</h4>
+                                <ul>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Invia file fino a 100 GB con Dropbox Transfert
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Cartelle offline su dispositivi mobili
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Pulizia remota dell'account
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Filigrana documento
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Assistenza prioritaria via email e chat
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Assistenza prioritaria via email e chat
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-plan first-row float-left">
+                    <div class="for-who">
+                        <i class="far fa-building"></i> Team
+                    </div>
+                    <div class="container-offer">
+                        <div class="offer">
+                            <h3>Advanced</h3>
+                            <h4>19,99 &euro;</h4>
+                            <p class="grey">&sol; utente &sol; mese, a partire da 3 utenti</p>
+                        </div>
+                        <div class="desc-offer">
+                            <ul>
+                                <li class="clearfix">
+                                    <div class="li-icon float-left">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div class="li-desc float-left">
+                                        1 utente
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="li-icon float-left">
+                                        <i class="far fa-folder"></i>
+                                    </div>
+                                    <div class="li-desc float-left">
+                                        3 TB di spazio di archiviazione sicuro
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="li-icon float-left">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </div>
+                                    <div class="li-desc float-left">
+                                        Funzioni di produttivit&agrave; premium e considisione file semplice e sicura
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="offer-trial">
+                                <a href="#" class="btn-blue">Prova gratis per 30 giorni</a>
+                            </div>
+                            <span class="purchase underline">oppure </span> <span class="purchase"><a href="#">acquista
+                                    ora</a></span>
+                            <div class="hightlights">
+                                <h4>Punti salienti del piano</h4>
+                                <ul>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Invia file fino a 100 GB con Dropbox Transfert
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Cartelle offline su dispositivi mobili
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Pulizia remota dell'account
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Filigrana documento
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Assistenza prioritaria via email e chat
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="li-icon float-left">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="li-desc float-left">
+                                            Assistenza prioritaria via email e chat
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-plan second-row float-left">
+                    <div class="for-who">
+                        <i class="far fa-building"></i> Team
+                    </div>
+                    <div class="container-offer clearfix">
+                        <div class="col-left float-left">
+                            <div class="offer">
+                                <h3>Enterprise</h3>
+                                <h4>Contatta l'ufficio vendite per i prezzi</h4>
+                            </div>
+                            <div class="desc-offer">
+                                <p class="offer-black">Soluzioni personalizzate e supporto su misura per aiutare i
+                                    professionisti IT nella gestione
+                                    su qualsiasi scala.</p>
+                            </div>
+                        </div>
+                        <div class="col-right float-left">
+                            <div class="offer-trial">
+                                <a href="#" class="btn-blue">Contatta l'ufficio vendite</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section class="partner padding-tb-4em width-70">
+            <div class="partner-container clearfix">
+                <div class="partner-col-left float-left">
+                    <img src="img/partner.png" alt="due persone che chiacchierano animatamente">
+                </div>
+                <div class="partner-col-right float-left">
+                    <div class="container-col-right">
+                        <h3>Entra in contatto con un partner Dropbox</h3>
+                        <p>Trova un partner Dropbox e HelloSign di fiducia. Ottieni le soluzioni e i servizi necessari
+                            per raggiungere i tuoi obiettivi aziendali, tra cui implementazione, integrazione, gestione
+                            e supporto continui.</p>
+                        <a href="#" class="btn-light">Trova un partner</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="dropbox-features padding-tb-4em width-70">
+            <h2>Esegui pi&ugrave; operazioni con Dropbox Business</h2>
+            <div class="features-container first-row clearfix margin-top-4em">
+                <div class="col-features float-left">
+                    <img src="img/business-feature-switching-tools.png" alt="funzionalit&agrave; scambio strumenti">
+                    <h3>Passa di meno da uno strumento all'altro</h3>
+                    <p>Porta a termine le attivit&agrave; quotidiane con un solo strumento. Crea, modifica e condividi
+                        contenuti cloud da Documenti, Fogli e Presentazioni di Google, file Microsoft Office e <a
+                            href="https://www.dropbox.com/paper" target="_blank">Dropbox Paper</a> direttamente da
+                        Dropbox.</p>
+                </div>
+                <div class="col-features float-left">
+                    <img src="img/business-feature-coordinate-it.png" alt="funzionalit&agrave; coordinazione">
+                    <h3>Trasforma le tue cartelle</h3>
+                    <p>Dropbox riunisce i tuoi file e i tuoi contenuti cloud, consentendoti di raggruppare presentazioni
+                        PowerPoint, documenti
+                        Google, bacheche di Trello e qualsiasi strumento necessario.</p>
+                </div>
+                <div class="col-features float-left">
+                    <img src="img/business-feature-multi-device.png" alt="funzionalit&agrave; multi-device">
+                    <h3>Collaborazione sempre e ovunque</h3>
+                    <p>Accedi facilmente e condividi il tuo lavoro da qualsiasi computer, dispositivo mobile o browser
+                        web.</p>
+                </div>
+            </div>
+            <div class="features-container second-row clearfix margin-top-4em">
+                <div class="col-features float-left">
+                    <img src="img/business-feature-integrations-it.png"
+                        alt="funzionalit&agrave; integrazione comunicazione">
+                    <h3>Avvia una discussione</h3>
+                    <p>I principali strumenti di comunicazione quali <a
+                            href="https://www.dropbox.com/app-integrations/slack" target="_blank">Slack</a> e <a
+                            href="https://www.dropbox.com/app-integrations/zoom" target="_blank">Zoom</a> funzionano
+                        direttamente da Dropbox. Organizza una riunione
+                        rapida o persino una sala conferenze virtuale con pochi clic.</p>
+                </div>
+                <div class="col-features float-left">
+                    <img src="img/business-feature-send-files-it.png" alt="funzionalit&agrave; invio file">
+                    <h3>Invia in modo sicuro file di grandi dimensioni</h3>
+                    <p><strong>Dropbox Transfer</strong> è il modo facile e sicuro per inviare a colleghi e clienti file
+                        definitivi di qualsiasi dimensione.
+                        Proteggi il tuo lavoro con password personalizzate e date di scadenza e ottieni la conferma
+                        della consegna con le
+                        notifiche di download.</p>
+                </div>
+                <div class="col-features float-left">
+                    <img src="img/business-feature-security.png" alt="funzionalit&agrave; sicurrezza">
+                    <h3>Massima tranquillit&agrave;</h3>
+                    <p><a href="https://www.dropbox.com/business/trust/security" target="_blank">Un'infrastruttura
+                            distribuita sicura</a> e <a
+                            href="https://www.dropbox.com/business/tour/administrative-tools" target="_blank">strumenti
+                            di amministrazione</a> per il controllo e la visibilità mantengono i dati
+                        della tua azienda al sicuro in Dropbox.</p>
+                </div>
+            </div>
+        </section>
+        <section class="teams padding-t-4em">
+            <div class="team-header width-70 clearfix">
+                <div class="team-header-text float-left">
+                    <h2>Pi&ugrave; di 500.000 team utilizzano Dropbox Business</h2>
+                    <span class="clients"><a href="">Scopri di più sui nostri clienti</a></span>
+                </div>
+            </div>
+            <div class="squared-teams clearfix">
+                <div class="col-squared-teams float-left">
+                    <div class="team designit relative bordered">
+                        <img class="logo absolute" src="img/designit.svg" alt="">
+                    </div>
+                    <div class="team florida relative">
+                        <img class="logo absolute"
+                            src="https://cfl.dropboxstatic.com/static/images/business/homepage/bermuda/customers/university_of_florida-vflZIQgCW.svg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-squared-teams float-left">
+                    <div class="team arizona relative">
+                        <img class="logo absolute" src="img/arizona_state_university.svg" alt="">
+                    </div>
+                    <div class="team topps relative">
+                        <img class="logo absolute" src="img/topps.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-center-team float-left">
+                    <div class="col-center-container relative">
+                        <img src="img/designit.svg" alt="">
+                        <div class="logo-desc absolute">
+                            <span class="line"></span>
+                            <p>"I membri del nostro team lavorano costantemente in Paesi, fusi orari e uffici
+                                diversi. Ora molte soluzioni sono
+                                compatibili con queste esigenze, ma nessuna è facile quanto Dropbox e Dropbox Paper. Ora
+                                molte soluzioni sono
+                                compatibili con queste esigenze, ma nessuna è facile quanto Dropbox Paper".</p>
+                            <span>Morten Thomsen, Global IT Lead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-squared-teams float-left">
+                    <div class="team bicycle relative">
+                        <img class="logo absolute" src="img/world_bicycle_relief.svg" alt="">
+                    </div>
+                    <div class="team planet relative">
+                        <img class="logo absolute" src="img/lonely_planet.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-squared-teams float-left">
+                    <div class="team hearst relative">
+                        <img class="logo absolute" src="img/hearst_corp.svg" alt="">
+                    </div>
+                    <div class="team clearchannel relative">
+                        <img class="logo absolute" src="img/clear_channel.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="trial"> </section>
+        <section class="faq width-70"></section>
+    
+    </main>
+    <!-- /main -->
+  <!--inizio footer-->
+ <footer>
+
+ </footer>
+ <!--fine footer-->
     
     
 </body>
