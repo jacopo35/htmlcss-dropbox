@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +11,10 @@ html {
 
 }
 
-
+/* Common */
 :root {
   --blue: #0061FF;
+  --blue-hover: #3681fa;
   --light-blue: #B4D0E7;
   --light-green: #A2D39B;
   --magenta: #61082C;
@@ -26,6 +26,27 @@ html {
   --yellow: #FFD830;
 }
 
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+body {
+    width: 100%;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+/* Common layout  */
 .relative {
     position: relative;
 }
@@ -34,6 +55,11 @@ html {
     position: absolute;
 }
 
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+/* Common float */
 .float-left {
     float: left;
 }
@@ -42,9 +68,46 @@ html {
     float: right;
 }
 
+/* Common width */
+.width-7 {
+    width: 7%;
+}
+
+.width-15 {
+    width: 15%;
+}
+
+.width-20 {
+    width: 20%;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+.width-40 {
+    width: 40%;
+}
+
+.width-45 {
+    width: 45%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-55 {
+    width: 55%;
+}
+
 .width-70 {
     width: 70%;
     margin: 0 auto;
+}
+
+.width-75 {
+    width: 75%;
 }
 
 .width-80 {
@@ -52,6 +115,11 @@ html {
     margin: 0 auto;
 }
 
+.width-100 {
+    width: 100%;
+}
+
+/* Common margin and padding */
 .padding-tb-8 {
     padding: 8% 0;
 }
@@ -65,59 +133,71 @@ html {
     padding-top: 4em;
 }
 
+.padding-tb-8em {
+    padding-top: 8em;
+    padding-bottom: 8em;
+}
+
 .margin-top-4em {
     margin-top: 4em;
 }
 
-.clearfix::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.hidden {
-    visibility: hidden;
-}
-
+/* Common btn */
 a.btn-blue,
-a.btn-blue:hover,
-a.btn-blue:focus,
-a.btn-blue:active {
-    background-color: var(--blue);
-    padding: 7px 20px;
-    font-size: 0.9em;
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-}
-
 a.btn-light,
-a.btn-light:hover,
-a.btn-light:focus,
-a.btn-light:active {
+a.btn-white { 
     padding: 7px 20px;
-    background-color: white;
     display: inline-block;
-    line-height: 2em;
     text-decoration: none;
-    border: 1px solid black;
+}
+
+a.btn-blue { 
+    font-size: 0.9em;
+    color: white;
+    background-color: var(--blue);
+}
+
+a.btn-blue:hover,
+a.btn-blue:active,
+a.btn-blue:focus {
+    background-color: var(--blue-hover);
+}
+
+a.btn-light {
+    line-height: 2em;
+    width: 40%;
+    text-align: center;
     color: black;
+    background-color: white;
+    border: 1px solid black;
 }
 
-body {
-    width: 100%;
-    min-width: 600px;
-    max-width: 2000px;
-    margin: 0 auto;
+a.btn-light:hover,
+a.btn-light:active,
+a.btn-light:focus {
+    border: 2px solid black;
+    line-height: calc(2em - 2px);
 }
 
-footer {
-    height: 600px;
-    background-color: black;
+a.btn-white {
+    font-size: 1.1em;
+    color: black;
+    background-color: white;
 }
 
+a.btn-white:hover,
+a.btn-white:active,
+a.btn-white:focus {
+    background-color: rgb(241, 241, 241);
+}
+
+ul {
+    list-style-type: none;
+}
+/* /Common */
+
+/* Header */
 header nav {
-    width: 100%;
     height: 80px;
     padding: 0 25px;
     background-color: white;
@@ -128,42 +208,34 @@ header nav {
 }
 
 nav .col-logo {
-    width: 10%;
     padding: 25px 0;
 }
 
 nav .col-menu-first {
-    width: 30%;
+    padding-left: 2%;
 }
 
 nav .col-menu-second {
-    width: 30%;
+    text-align: right;
+    padding-right: 2%;
 }
 
 nav .col-btn {
     margin: 25px 0;
 }
 
-nav .col-logo img {
-    height: 100%;
-    vertical-align: middle;
-}
-
 nav ul.nav-menu {
-    list-style-type: none;
     line-height: 30px;
-    vertical-align: middle;
+    
 }
 
 ul.nav-menu > li {
     display: inline-block;
     margin: 0 20px;
+    position: relative;
 }
 
-ul.nav-menu a,
-ul.nav-menu a:hover,
-ul.nav-menu a:active,
-ul.nav-menu a:focus {
+ul.nav-menu a.main-menu {
     text-decoration: none;
     color: black;
     display: inline-block;
@@ -172,11 +244,43 @@ ul.nav-menu a:focus {
     padding: 25px 0;
 }
 
-ul.nav-menu a:hover,
-ul.nav-menu a:active,
-ul.nav-menu a:focus {
+ul.nav-menu a.main-menu:hover,
+ul.nav-menu a.main-menu:active,
+ul.nav-menu a.main-menu:focus {
     border-bottom: 2px solid var(--blue);
 }
+
+ul.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+    padding: 1.5em 0;
+    width: 100%;
+    left: 50%;
+    right: auto;
+    text-align: center;
+    transform: translate(-50%, 0);
+}
+
+ul.nav-menu li:hover .dropdown-content {
+    display: block;
+}
+
+ul.dropdown-content a.dropdown-menu {
+    text-decoration: none;
+    color: black;
+}
+
+ul.dropdown-content a.dropdown-menu:hover,
+ul.dropdown-content a.dropdown-menu:active,
+ul.dropdown-content a.dropdown-menu:focus {
+    text-decoration: underline;
+    color: black;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Jumbotron */
 
 header .jumbotron {
     width: 100%;
@@ -184,17 +288,21 @@ header .jumbotron {
     margin-top: 80px;
 }
 
+.jumbotron .jumbo-container {
+    max-width: 1500px;
+}
+
 .jumbotron h1.jumbo-title {
     font-size: 4.7em;
     padding-bottom: 0.6em;
 }
 
-.col-jumbo-left {
+.jumbotron .col-jumbo-left {
     width: 35%;
     padding-right: 3.5em;
 }
 
-.col-jumbo-right {
+.jumbotron  .col-jumbo-right {
     width: 65%;
 }
 
@@ -202,10 +310,7 @@ header .jumbotron {
     padding-bottom: 1.5em;
 }
 
-.jumbo-trial a.btn-blue,
-.jumbo-trial a.btn-blue:hover,
-.jumbo-trial a.btn-blue:active,
-.jumbo-trial a.btn-blue:focus {
+.jumbo-trial a.btn-blue {
     font-size: 1.1em;
 }
 
@@ -220,27 +325,19 @@ header .jumbotron {
     font-size: 2.5em;
 }
 
-.arrow-down a,
-.arrow-down a:hover,
-.arrow-down a:focus,
-.arrow-down a:active {
+.arrow-down a {
     color: black;
 }
 
 
-.jumbo-img {
+.col-jumbo-right .jumbo-img {
     top: 0;
     left: 0;
-}
-
-.col-jumbo-right img {
-    width: 100%;
 }
 
 /* Main */
 
 main {
-    width: 100%;
     padding-top: 10em;
 }
 
@@ -257,59 +354,74 @@ main h4 {
     padding: 1.3em 0 1em 0;
 }
 
-main .trial {
-    height: 400px;
-    background-color: lightseagreen;
-}
+/* Sezione piani tariffari */
 
-main .faq {
-    height: 800px;
-    background-color: salmon;
-}
-
-span.circle {
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-span.circle.bordered {
-    border: 3px solid var(--blue);
-}
-
-span.circle.empty {
-    border: 1px solid grey;
-}
-
-.billing > span {
+.billing {
     line-height: 15px;
     vertical-align: middle;
 }
 
-span.billing-type {
-    padding-left: 0.2em;
-    padding-right: 3em;
+.billing input[type="radio"] {
+    appearance: none;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    vertical-align: bottom;
+    border: 1px solid grey;
 }
 
-.container-col-plans {
+.billing input[type="radio"]:checked {
+    opacity: 0;
+}
+
+.billing label {
+    margin-right: 1em;
+    position: relative;
+}
+
+.billing input:checked + label::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin-left: -19px;
+    display: inline-block;
+    border: 3px solid var(--blue);
+    border-radius: 100%;
+}
+
+.billing input::not(:checked) + label::before {
+    display: none;
+}
+
+.plans .container-col-plans {
     margin-top: 3em;
 }
 
-.container-col-plans .col-plan {
+.plans .container-col-plans .col-plan {
     width: calc(100% / 3 - 40px);
     background-color: white;
     border: 1px solid lightgrey;
 }
 
-.container-col-plans .col-plan:nth-child(2) {
+.plans .container-col-plans .col-plan.first-row {
+    min-height: 1000px;
+}
+
+
+.plans .container-col-plans .col-plan:nth-child(2) {
     margin: 0 60px 0 60px;
 }
 
-.container-col-plans .col-plan:last-child {
+.plans .container-col-plans .col-plan.second-row {
     width: 100%;
     margin-top: 3em;
+
 }
 
 .col-plan .for-who {
@@ -322,13 +434,13 @@ span.billing-type {
     padding: 2em 2em 2em 2em;
 }
 
-p.grey {
-    color: grey;
+.container-offer p.grey,
+.container-offer p.offer-black {
     font-size: 0.9em;
 }
 
-p.offer-black {
-    font-size: 0.9em;
+.container-offer p.grey {
+    color: grey;
 }
 
 .first-row .desc-offer {
@@ -336,7 +448,6 @@ p.offer-black {
 }
 
 .desc-offer ul {
-    list-style-type: none;
     font-size: 0.8em;
     padding: 3em 0;
 }
@@ -350,15 +461,13 @@ p.offer-black {
     padding-bottom: 0em;
 }
 
-.desc-offer .li-icon {
-    width: 7%;
-}
-
 .desc-offer .li-desc {
     width: 93%;
+    padding-left: 8px;
 }
 
-.offer-trial a.btn-blue {
+.offer-trial a.btn-blue,
+.offer-trial a.btn-white {
     width: 100%;
     text-align: center;
 }
@@ -373,10 +482,7 @@ span.purchase.underline {
     border-bottom: 1px solid lightgrey;
 }
 
-span.purchase a,
-span.purchase a:hover,
-span.purchase a:active,
-span.purchase a:focus {
+span.purchase a {
     color: var(--blue);
     text-decoration: underline;
 }
@@ -394,26 +500,7 @@ span.purchase a:focus {
     font-size: 1.2em;
 }
 
-.col-plan.second-row .col-left {
-    width: 75%;
-}
-
-.col-plan.second-row .col-right {
-    width: 25%;
-}
-
-.partner-container .partner-col-left {
-    width: 55%;
-}
-
-.partner-container .partner-col-right {
-    width: 45%;
-}
-
-.partner-col-left img {
-    width: 100%;
-}
-
+/* Sezione trova un partner */
 .partner-col-right .container-col-right {
     padding: 3em;
 }
@@ -422,6 +509,7 @@ span.purchase a:focus {
     padding: 2em 0;
 }
 
+/* Sezione features Dropbox Business */
 .features-container .col-features {
     width: calc(100% / 3 - 40px);
 }
@@ -430,56 +518,32 @@ span.purchase a:focus {
     margin: 0 60px;
 }
 
-.features-container .col-features img {
-    width: 100%;
-}
-
 .features-container .col-features h3 {
     margin: 0.3em 0 1em 0;
 }
 
-.features-container .col-features a,
-.features-container .col-features a:hover,
-.features-container .col-features a:focus,
-.features-container .col-features a:active {
+.features-container .col-features a {
     color: black;
 }
 
-.teams .team-header .team-header-text {
-    width: 50%;
-}
-
+/* Sezione team header*/
 .teams .team-header span.clients {
     display: inline-block;
     padding: 2em 0;
 }
 
-span.clients a,
-span.clients a:hover,
-span.clients a:active,
-span.clients a:focus {
+span.clients a {
     color: var(--blue);
     text-decoration: underline;
 }
 
+/* Sezione team quadrati */
 .squared-teams {
     background-color: #F5F5F5;
 }
 
 .squared-teams .col-squared-teams {
-    width: 15%;
     text-align: center;
-}
-
-.squared-teams .col-center-team {
-    width: 40%;
-}
-.col-squared-teams img {
-    width: 80%;
-    filter: invert(1);
-    object-fit: contain;
-    display: block;
-    margin: auto;
 }
 
 .col-squared-teams .team {
@@ -496,6 +560,7 @@ span.clients a:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    filter: invert(1);
 }
 
 .col-squared-teams .designit {
@@ -530,27 +595,193 @@ span.clients a:focus {
     background-color: var(--yellow);
 }
 
+/* Bonus hover */
+.col-squared-teams .team:hover {
+    padding-bottom: calc(100% - 20px);
+}
+
+.col-squared-teams .team.bordered:hover .logo {
+    width: 60%;
+}
+
+.col-squared-teams .team:hover .logo {
+    width: calc(60% + 12px);
+}
+
+.col-squared-teams .florida:hover {
+    border: 10px solid #5babce;
+}
+
+.col-squared-teams .arizona:hover {
+    border: 10px solid #8d0d40;
+}
+
+.col-squared-teams .topps:hover {
+    border: 10px solid #f16a6a;
+}
+
+.col-squared-teams .bicycle:hover {
+    border: 10px solid #fc2c4b;
+}
+
+.col-squared-teams .planet:hover {
+    border: 10px solid #4256a5;
+}
+
+.col-squared-teams .hearst:hover {
+    border: 10px solid #e6f2fd;
+}
+
+.col-squared-teams .clearchannel:hover {
+    border: 10px solid #f8e9a5;
+}
+
+/* Sezione team colonna centrale */
 .col-center-team {
-    padding: 3em 3em 3em 3em;
+    padding: 3em 3em 0 3em;
 }
 
 .col-center-team img {
-    width: 20%;
     display: inline-block;
 }
 
 .col-center-team .col-center-container {
-    overflow-x: scroll;
-    padding-bottom: 45%;
+    overflow-y: scroll;
+    padding-bottom: 62%;
 }
 
 .col-center-team p {
     margin: 4em 0;
 }
 
-.col-center-team span.line {
-    border-bottom: 1px solid lightgrey;
-    width: 5em;
+.col-center-team .logo-desc::before {
+    content: '';
+    width: 10%;
+    height: 1px;
     display: inline-block;
     margin-top: 2em;
+    background-color: lightgrey;
+}
+
+/* Bonus team colonna centrale */
+/* .col-center-team.florida-contain {
+    display: none;
+}
+.col-squared-teams:nth-child(1):hover ~ .col-center-team.designit-contain {
+    background-color: red;
+}
+.florida:hover .florida-contain {
+    display: block;
+} */
+
+/* Sezione trial, "Porta Dropbox Business nella tua azienda" */
+main .trial {
+    background-color: var(--sugar-paper);
+}
+
+.trial .text h2 {
+    color: var(--magenta);
+}
+
+/* Sezione domande frequenti */
+.faq .container-faq h3 {
+    font-size: 2em;
+    padding-bottom: 1.5em;
+}
+
+.faq .container-faq li.question {
+    padding: 2em 0;
+    font-weight: bold;
+    border-top: 1px solid grey;
+}
+
+.faq .container-faq li.question:last-child {
+    border-bottom: 1px solid grey;
+}
+
+.faq .container-faq ul.answer {
+    display: none;
+    font-weight: normal;
+    padding-top: 2em;
+}
+
+li.question:hover > ul.answer {
+    display: inline-block;
+}
+
+li.question:hover > i.fa-chevron-down,
+li.question > i.fa-chevron-up {
+    display: none;
+}
+
+li.question:hover > i.fa-chevron-up {
+    display: inline-block;
+}
+
+.faq i.float-right {
+    padding-right: 3%;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+}
+
+.footer-container .first-row {
+    color: white;
+    padding-bottom: 6em;
+}
+
+.first-row .col-footer-container:last-child {
+    margin-right: 0;
+}
+
+footer .footer-container .first-row h3 {
+    font-size: 1.4em;
+}
+
+footer .footer-container .first-row ul {
+    padding-top: 2em;
+}
+
+footer .footer-container .first-row li {
+    padding-bottom: 1em;
+    font-size: 0.9em;
+}
+
+footer .footer-container .first-row li:last-child {
+    padding-bottom: 0em;
+}
+
+footer .footer-container .first-row a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-container .first-row a:hover,
+footer .footer-container .first-row a:focus,
+footer .footer-container .first-row a:active {
+    text-decoration: underline;
+}
+
+.footer-container .second-row {
+    color: grey;
+}
+
+.footer-container .second-row .second-row-container {
+    padding-top: 3em;
+    font-size: 0.9em;
+}
+
+.footer-container .second-row .fa-sort-up {
+    vertical-align: bottom;
+}
+
+.footer-container .second-row::before {
+    content: '';
+    width: 8%;
+    height: 1px;
+    display: inline-block;
+    margin-bottom: 1em;
+    background-color: white;
 }
