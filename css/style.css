@@ -11,7 +11,6 @@ html {
 
 }
 
-/* Common */
 :root {
   --blue: #0061FF;
   --blue-hover: #3681fa;
@@ -46,7 +45,6 @@ body {
     margin: 0 auto;
 }
 
-/* Common layout  */
 .relative {
     position: relative;
 }
@@ -59,7 +57,6 @@ body {
     vertical-align: middle;
 }
 
-/* Common float */
 .float-left {
     float: left;
 }
@@ -68,7 +65,6 @@ body {
     float: right;
 }
 
-/* Common width */
 .width-7 {
     width: 7%;
 }
@@ -119,7 +115,6 @@ body {
     width: 100%;
 }
 
-/* Common margin and padding */
 .padding-tb-8 {
     padding: 8% 0;
 }
@@ -142,7 +137,6 @@ body {
     margin-top: 4em;
 }
 
-/* Common btn */
 a.btn-blue,
 a.btn-light,
 a.btn-white { 
@@ -194,8 +188,6 @@ a.btn-white:focus {
 ul {
     list-style-type: none;
 }
-/* /Common */
-
 /* Header */
 header nav {
     height: 80px;
@@ -250,14 +242,19 @@ ul.nav-menu a.main-menu:focus {
     border-bottom: 2px solid var(--blue);
 }
 
+ul.nav-menu a.main-menu.dropdown:hover,
+ul.nav-menu a.main-menu.dropdown:active,
+ul.nav-menu a.main-menu.dropdown:focus {
+    border-bottom: 0px;
+}
+
 ul.dropdown-content {
     display: none;
-    background-color: #f9f9f9;
-    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
     padding: 1.5em 0;
     width: 100%;
     left: 50%;
-    right: auto;
     text-align: center;
     transform: translate(-50%, 0);
 }
@@ -278,6 +275,26 @@ ul.dropdown-content a.dropdown-menu:focus {
     color: black;
     display: inline-block;
     width: 100%;
+}
+
+ul.nav-menu i {
+    padding-left: 10px;
+}
+
+ul.nav-menu i.fa-chevron-up {
+    display: none;
+}
+
+li:hover i.fa-chevron-up,
+li:active i.fa-chevron-up,
+li:focus i.fa-chevron-up {
+    display: inline-block;
+}
+
+li:hover i.fa-chevron-down,
+li:active i.fa-chevron-down,
+li:focus i.fa-chevron-down {
+    display: none;
 }
 
 /* Jumbotron */
@@ -353,8 +370,6 @@ main h4 {
     font-size: 0.9em;
     padding: 1.3em 0 1em 0;
 }
-
-/* Sezione piani tariffari */
 
 .billing {
     line-height: 15px;
@@ -500,7 +515,6 @@ span.purchase a {
     font-size: 1.2em;
 }
 
-/* Sezione trova un partner */
 .partner-col-right .container-col-right {
     padding: 3em;
 }
@@ -509,7 +523,6 @@ span.purchase a {
     padding: 2em 0;
 }
 
-/* Sezione features Dropbox Business */
 .features-container .col-features {
     width: calc(100% / 3 - 40px);
 }
@@ -526,7 +539,6 @@ span.purchase a {
     color: black;
 }
 
-/* Sezione team header*/
 .teams .team-header span.clients {
     display: inline-block;
     padding: 2em 0;
@@ -537,7 +549,6 @@ span.clients a {
     text-decoration: underline;
 }
 
-/* Sezione team quadrati */
 .squared-teams {
     background-color: #F5F5F5;
 }
@@ -595,7 +606,6 @@ span.clients a {
     background-color: var(--yellow);
 }
 
-/* Bonus hover */
 .col-squared-teams .team:hover {
     padding-bottom: calc(100% - 20px);
 }
@@ -636,7 +646,6 @@ span.clients a {
     border: 10px solid #f8e9a5;
 }
 
-/* Sezione team colonna centrale */
 .col-center-team {
     padding: 3em 3em 0 3em;
 }
@@ -663,18 +672,6 @@ span.clients a {
     background-color: lightgrey;
 }
 
-/* Bonus team colonna centrale */
-/* .col-center-team.florida-contain {
-    display: none;
-}
-.col-squared-teams:nth-child(1):hover ~ .col-center-team.designit-contain {
-    background-color: red;
-}
-.florida:hover .florida-contain {
-    display: block;
-} */
-
-/* Sezione trial, "Porta Dropbox Business nella tua azienda" */
 main .trial {
     background-color: var(--sugar-paper);
 }
@@ -683,7 +680,6 @@ main .trial {
     color: var(--magenta);
 }
 
-/* Sezione domande frequenti */
 .faq .container-faq h3 {
     font-size: 2em;
     padding-bottom: 1.5em;
@@ -697,6 +693,10 @@ main .trial {
 
 .faq .container-faq li.question:last-child {
     border-bottom: 1px solid grey;
+}
+
+.faq .container-faq ul.answer a {
+    color: black;
 }
 
 .faq .container-faq ul.answer {
